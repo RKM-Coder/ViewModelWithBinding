@@ -14,11 +14,14 @@ import dagger.android.support.DaggerAppCompatActivity;
 public class AuthActivity extends DaggerAppCompatActivity {
     @Inject
     String toMakeMsg;
+    @Inject
+    boolean isApprunning;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
 
-        Log.e("OUT",toMakeMsg);
+        Log.e("OUT",toMakeMsg+" Application running"+isApprunning);
     }
 }
