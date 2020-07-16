@@ -10,14 +10,26 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.request.RequestOptions;
 import com.goalsr.listenableworkerjavatemplate.R;
+import com.goalsr.listenableworkerjavatemplate.dagger2.utils.Constante;
 
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
 public class AppModule {
+
+    @Singleton
+    @Provides
+    static Retrofit provideRetrofit(){
+        return new Retrofit.Builder()
+                .baseUrl(Constante.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+    }
    /* @Provides
     static String saySomething(){
         return "We are ready";
