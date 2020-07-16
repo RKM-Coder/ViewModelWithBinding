@@ -11,6 +11,8 @@ import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.request.RequestOptions;
 import com.goalsr.listenableworkerjavatemplate.R;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -30,20 +32,20 @@ public class AppModule {
     static boolean getStatus(){
         return true;
     }*/
-
+    @Singleton
     @Provides
     static RequestOptions provideRequestOption(){
         return RequestOptions.placeholderOf(R.mipmap.ic_splash_logo)
                 .error(R.mipmap.mp_3);
 
     }
-
+    @Singleton
     @Provides
     static RequestManager provideRequestManager(Application application,RequestOptions options){
         return Glide.with(application)
                 .applyDefaultRequestOptions(options);
     }
-
+    @Singleton
     @Provides
     static Drawable provideAppDrawable(Application application){
          return ContextCompat.getDrawable(application,R.mipmap.ic_splash_logo);
