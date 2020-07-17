@@ -4,6 +4,7 @@ import com.goalsr.listenableworkerjavatemplate.dagger2.di.auth.AuthModule;
 import com.goalsr.listenableworkerjavatemplate.dagger2.di.auth.AuthViewModelsModule;
 import com.goalsr.listenableworkerjavatemplate.dagger2.ui.auth.AuthActivity;
 import com.goalsr.listenableworkerjavatemplate.dagger2.ui.auth.AuthViewModel;
+import com.goalsr.listenableworkerjavatemplate.dagger2.ui.main.MainDaggerActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -15,5 +16,8 @@ public abstract class ActivityBuilderModule {
     modules = {AuthViewModelsModule.class, AuthModule.class}
             )
     abstract AuthActivity contributeAuthActivity();
+
+    @ContributesAndroidInjector
+    abstract MainDaggerActivity contributeMainDraggeActivity();
 
 }

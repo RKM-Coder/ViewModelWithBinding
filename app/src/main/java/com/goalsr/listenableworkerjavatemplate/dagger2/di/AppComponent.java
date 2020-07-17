@@ -3,6 +3,7 @@ package com.goalsr.listenableworkerjavatemplate.dagger2.di;
 import android.app.Application;
 
 import com.goalsr.listenableworkerjavatemplate.dagger2.DaggerBaseApplication;
+import com.goalsr.listenableworkerjavatemplate.dagger2.SessionManager;
 
 import javax.inject.Singleton;
 
@@ -20,6 +21,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
 )
 public interface AppComponent extends AndroidInjector<DaggerBaseApplication> {
 
+    SessionManager sessionManager();
     @Component.Builder
     interface Builder {
 

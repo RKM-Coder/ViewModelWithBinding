@@ -1,8 +1,7 @@
-package com.goalsr.listenableworkerjavatemplate;
+package com.goalsr.listenableworkerjavatemplate.workmanagerlistion;
 
 import android.util.Log;
 
-import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.MutableLiveData;
