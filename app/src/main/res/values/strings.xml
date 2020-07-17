@@ -5,4 +5,5 @@
     <string name="location_data_placeholder">LocationDataPlaceHolder</string>
     <string name="location_time_placeholder">LocationTimePlaceHolder</string>
     <string name="work_info_placeholder">WorkInfoPlaceHolder</string>
+    <string name="main_menu_logout">Logout</string>
 </resources>

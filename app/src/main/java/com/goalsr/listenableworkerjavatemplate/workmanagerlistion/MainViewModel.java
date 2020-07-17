@@ -9,7 +9,7 @@ import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
 import androidx.work.WorkInfo;
 
-public class    MainViewModel extends ViewModel {
+public class MainViewModel extends ViewModel {
     private Repository repository;
 
     public MutableLiveData<String> lastLocation=new MutableLiveData<>();
