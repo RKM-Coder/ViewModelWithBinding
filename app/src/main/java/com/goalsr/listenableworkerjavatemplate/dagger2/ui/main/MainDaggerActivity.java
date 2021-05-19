@@ -10,6 +10,8 @@ import android.view.MenuItem;
 
 import com.goalsr.listenableworkerjavatemplate.R;
 import com.goalsr.listenableworkerjavatemplate.dagger2.BaseActivity;
+import com.goalsr.listenableworkerjavatemplate.dagger2.ui.main.post.PostFragment;
+import com.goalsr.listenableworkerjavatemplate.dagger2.ui.main.profile.ProfileFragment;
 
 public class MainDaggerActivity extends BaseActivity {
     private String TAG="main";
@@ -18,6 +20,12 @@ public class MainDaggerActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_dagger);
+        testFragment();
+    }
+
+    public void testFragment(){
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_container,new PostFragment())
+                .commit();
     }
 
     @Override
